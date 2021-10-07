@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <header class="header">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        
+        <img src="imagenes/1200px-International_Pokémon_logo.svg.png" alt="Logo Pokemon">
+        <form action="" onsubmit="buscarPokemonUnico(event)" class="nav-search">
+            <input type="text" class="input-text" id="input-text" name="inputPokemon">
+            <label for="checkbox">
+                <i class="fas fa-search" id="btn-search"></i>
+            </label>
+        </form>
+
+
+    </header>
+    <main class="main">
+        <aside class="aside">
+            
+            <nav class="nav-aside">
+                <ul>
+                    <li class="acero nav-link"><button onclick="buscarPokemonPorTipo('steel')">acero</button></li>
+                    <li class="agua nav-link"><button onclick="buscarPokemonPorTipo('water')">agua</button></li>
+                    <li class="bicho nav-link"><button onclick="buscarPokemonPorTipo('bug')">bicho</button></li>
+                    <li class="dragon nav-link"><button onclick="buscarPokemonPorTipo('dragon')">Dragon</button></li>
+                    <li class="electrico nav-link"><button onclick="buscarPokemonPorTipo('electric')">Electrico</button></li>
+                    <li class="fantasma nav-link"><button onclick="buscarPokemonPorTipo('ghost')">Fantasma</button></li>
+                    <li class="fuego nav-link"><button onclick="buscarPokemonPorTipo('fire')">Fuego</button></li>
+                    <li class="hada nav-link"><button onclick="buscarPokemonPorTipo('fairy')">Hada</button></li>
+                    <li class="hielo nav-link"><button onclick="buscarPokemonPorTipo('ice')">Hielo</button></li>
+                    <li class="lucha nav-link"><button onclick="buscarPokemonPorTipo('fighting')">Lucha</button></li>
+                    <li class="normal nav-link"><button onclick="buscarPokemonPorTipo('normal')">Normal</button></li>
+                    <li class="planta nav-link"><button onclick="buscarPokemonPorTipo('grass')">Planta</button></li>
+                    <li class="psiquico nav-link"><button onclick="buscarPokemonPorTipo('psychic')">Psiquico</button></li>
+                    <li class="roca nav-link"><button onclick="buscarPokemonPorTipo('rock')">Roca</button></li>
+                    <li class="siniestro nav-link"><button onclick="buscarPokemonPorTipo('dark')">Siniestro</button></li>
+                    <li class="tierra nav-link"><button onclick="buscarPokemonPorTipo('ground')">Tierra</button></li>
+                    <li class="veneno nav-link"><button onclick="buscarPokemonPorTipo('poison')">Veneno</button></li>
+                    <li class="volador nav-link"><button onclick="buscarPokemonPorTipo('flying')">Volador</button></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <div class="container-main">
+        </div>
+    </main>
+    <footer class="footer"></footer>
+    <div class="wrapper">
+        <div class="spinner-border text-danger loader-spinner" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
